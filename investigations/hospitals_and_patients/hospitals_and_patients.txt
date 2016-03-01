@@ -1,0 +1,59 @@
+Sally Hong
+205 - Exercise 1
+
+
+Question 4
+
+---
+Are average scores for hospital quality and procedural variability correlated with patient survey response?
+---
+
+
+I used the HCAHPS Base Score from the patient survey.
+
+I interpreted this question as two part.
+
+I. Find if there is correlation between average scores for hospital quality and patient survey
+II. Find if there is correlation between procedural variability in a hospital  and patient survey.
+
+
+For I.
+
+	1. From "Timely and Effective Care"
+		A. Only select hospital with 20+ measurements
+			This is to weed out hospitals that have a perfect score but for one measurement
+		B. Average the score amongst the measurements per hospital
+	2. 
+		A. Determine the Pearson correlation coefficient between the average scores and the patient
+		survey.
+
+
+For II.
+
+	1. From "Timely and Effective Care"
+		A. Count the number of procedures per hospital. (Higher count means higher procedural variability.)
+	2.
+		A. Determine the Pearson correlation coefficient between the procedural variability
+		and the patient survey.
+
+
+
+A Pearson correlation coefficient of +1 is a strong positive linear relationship whereas closer to
+-1 suggests a strong negative linear relationship. A value near zero indicates no linear 
+relationship.
+
+
+---
+
+RESULTS
+
+I. hospavgcorr: 0.23345865203447996
+
+	There is a slight positive correlation between average scores of hospital quality and patient
+	survey score.
+
+II. hospmeascorr: -0.14096513494477603
+
+	There is a slight negative correlation between the procedural variability in a hospital and
+	patient survey. This makes sense from our data because often times there are hospitals with 
+	only one procedure with very high scores. 
