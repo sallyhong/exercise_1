@@ -6,6 +6,7 @@ Exercise 1
 hospitals.csv
 
 1. All files listed below should be in '/data/hospital/' with ownership given to user 'w205'
+
 Files to be copied to /data/hospital/
 Hospital General Information.csv
 Measure Dates.csv
@@ -14,6 +15,7 @@ Timely and Effective Care - Hospital.csv
 hvbp_hcahps_05_28_2015.csv
 
 2. Create renamed files as suggested in Exercise 01 Manual.
+
 touch /data/hospital/hospitals.csv
 touch /data/hospital/effective_care.csv
 touch /data/hospital/readmissions.csv
