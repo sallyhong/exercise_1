@@ -1,0 +1,89 @@
+Sally Hong
+205 - Exercise 1
+
+
+Question 2
+
+---
+What states are models of high-quality care?
+---
+
+
+Using the new table obtained from Question 1 (where I had a list of hospitals
+ranked by the proportions of measures that are higher than average), I grouped 
+by state and counted how many hospitals per state.
+
+To take account small states vs large states. I counted the number of 
+hospitals per state from "General Hospital Information". 
+
+I divided "table from question 1" by the the count from "General Hospital
+Information" to obtain a ratio-- how many of the hospitals per state are better 
+than average from the existing? 
+
+Here is my logic in outline form:
+
+
+	A. From Question 1's modified "Timely and Effective Care"
+
+		1. Group by state.
+		2. Count how many hospitals there are per state.
+
+	B. From "General Hospital Information"
+
+		1. Group by state.
+		2. Count how many hospitals there are per state.
+
+	C. 
+
+		1. Divide (2A) by (2B)
+			This will give you a ratio where % of the hospitals of a state is in the
+			query I made earlier regarding hospitals that achieved better than average
+			on various procedures.
+
+
+This was under the presumption that states that are models of "high-quality care"
+will consistently place hospitals in the "high-quality care" query.
+I expected large states such as California and Texas to have many hospitals in the 
+table from Question 1; however, those states have a high number of hospitals to 
+begin with. The results may be misleading.
+
+Large states will also have many hospitals in the "General Hospital Information" 
+list as well. Hence, I found and ranked by ratio. 
+
+
+---
+
+RESULTS
+
+1.	MA      0.35384615384615387
+2. 	NJ      0.2923076923076923
+3. 	DE      0.2857142857142857
+4. 	DC      0.2222222222222222
+5. 	MD      0.2127659574468085
+6. 	CT      0.1935483870967742
+7.	MI      0.1897810218978102
+8.	CA      0.18786127167630057
+9.	IL      0.17679558011049723
+10.	IN      0.168
+
+...
+
+41. AK      0.047619047619047616
+42. OK      0.047244094488188976
+43. TN      0.04504504504504504
+44. MN      0.03787878787878788
+45. LA      0.03361344537815126
+46. NV      0.027777777777777776
+47. ND      0.022222222222222223
+48. PR      0.019230769230769232
+49. AR      0.012987012987012988
+50. AL      0.01098901098901099
+51. MS      0.010101010101010102
+
+
+Here are the results I got: the first 10 states as well as the bottom 11 states. (In my 
+table, there were 51 states-- this included DC.)
+This table result seems pretty reasonable. Many of the New England states in the Northeast
+placed very high (MA, DE, MD, CT). California was also in the list.
+Interestingly enough, the bottom states were mostly Southern states such as Louisiana, 
+Tennessee, Alabama, and Missouri.
