@@ -48,6 +48,7 @@ Exercise 1
   wc -l surveys_responses.csv
 
 05. Create folders in HDFS for the renamed files
+
   hdfs dfs -mkdir /user/w205/hospital_compare
   hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
   hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
