@@ -1,0 +1,63 @@
+Sally Hong
+205 - Exercise 1
+
+
+Question 3
+
+---
+Which procedures have the greatest variability between hospitals?
+---
+
+
+I'm pretty sure there is a more elegant statistical way but here is what I did:
+
+	A. From "Timely and Effective Care"
+
+		1. Group by Measure ID
+		2. Determine score mean and standard deviation per Measure ID
+		3. Divide standard deviation by score mean
+
+
+I divided the standard deviation by the mean, because the standard deviation of "5" for a score of 50 
+vs 10 should be considered differently. 
+
+This time, I filtered out the "Not Available" values as well as the measures where "lower is better".
+The reasoning for this is that for those measures the variance was ridiculously high.
+In fact, its standard deviation was as high, if not higher, than the score itself. 
+
+
+---
+
+RESULTS
+
+0.46    				AMI_7a  Fibrinolytic Therapy Received within 30 Minutes of Hospital Arrival
+0.26497760779013535     STK_4   Thrombolytic Therapy
+0.2588275419051687      OP_2    Fibrinolytic Therapy Received Within 30 Minutes of ED Arrival
+0.18346000203228635     VTE_5   Venous Thromboembolism Warfarin Therapy Discharge Instructions
+0.1712357855930832      VTE_1   Venous Thromboembolism Prophylaxis
+0.1548075435320384      STK_8   Stroke Education
+0.14305889346018177     CAC_3   Home Management Plan of Care (HMPC) Document Given to Patient/Caregiver
+0.1302119347710144      IMM_2   Influenza Immunization
+0.12637523954462618     HF_1    Discharge Instructions
+0.10758961187656836     HF_2    Evaluation of LVS Function
+0.10695835986301272     STK_6   Discharged on Statin Medication
+0.09846172306146157     PN_6    Initial Antibiotic Selection for CAP in Immunocompetent Patient
+0.09479176584336366     STK_1   Venous Thromboembolism (VTE) Prophylaxis
+0.08449631040292688     VTE_3   Venous Thromboembolism Patients with Anticoagulation Overlap Therapy
+0.0788890659370839      VTE_2   Intensive Care Unit Venous Thromboembolism Prophylaxis
+0.07016026925746252     AMI_8a  Primary PCI Received Within 90 Minutes of Hospital Arrival
+0.06698234521686146     HF_3    ACEI or ARB for LVSD
+0.06460379972943574     STK_3   Anticoagulation Therapy for Atrial Fibrillation/Flutter
+0.058323578103435844    STK_10  Assessed for Rehabilitation
+0.05760953095949101     AMI_10  Statin Prescribed at Discharge
+0.05659499472953248     VTE_4   Venous Thromboembolism Patients Receiving Unfractionated Heparin with Dosages/Platelet Count Monitoring by Protocol or Nomogram
+0.054944668578484554    STK_5   Antithrombotic Therapy By End of Hospital Day 2
+0.05391966725764998     OP_4    Aspirin at Arrival
+0.052163271116448404    OP_6    Timing of Antibiotic Prophylaxis
+0.047472874392710356    SCIP_VTE_2      Surgery Patients Who Received Appropriate Venous Thromboembolism Prophylaxis Within 24 Hours Prior to Surgery to 24 Hours After Surgery
+0.040122045737342016    OP_7    Prophylactic Antibiotic Selection for Surgical Patients
+0.03938051415343153     STK_2   Discharged on Antithrombotic Therapy
+0.03858417613090002     AMI_2   Aspirin Prescribed at Discharge
+0.012944830266191892    CAC_2   Systemic Corticosteroids for Inpatient Asthma
+0.001428712588368134    CAC_1   Relievers for Inpatient Asthma
+Time taken: 0.366 seconds, Fetched 30 row(s)
