@@ -33,7 +33,7 @@ where timelyEffectiveT.fn like ''
 DROP TABLE topEffectiveScore
 ;
 CREATE TABLE IF NOT EXISTS topEffectiveScore
-AS SELECT tefiltered.provId, (COUNT(tefiltered.provId) / 100) as EffectiveScore
+AS SELECT tefiltered.provId, (COUNT(tefiltered.provId) / 51) as EffectiveScore
 from tefiltered
 inner join avgmeas
 on tefiltered.measId = avgmeas.measId
@@ -44,7 +44,7 @@ group by tefiltered.provId
 DROP TABLE topReadmissionsScore
 ;
 CREATE TABLE IF NOT EXISTS topReadmissionsScore
-AS SELECT generalT.provId, (Count(readmissionsDeathsT.national) / 100) AS ReadmissionsScore
+AS SELECT generalT.provId, (Count(readmissionsDeathsT.national) / 14) AS ReadmissionsScore
 FROM generalT INNER JOIN readmissionsDeathsT ON generalT.provId = readmissionsDeathsT.provId
 WHERE (((readmissionsDeathsT.national) Like 'Better than the National Rate'))
 GROUP BY generalT.provId
