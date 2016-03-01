@@ -13,5 +13,5 @@ Please read the README files in each folder before running files
 2. Run files in Transforming folder
   All SQL Files in folder
 
-3. Run files in Investigation folder
+3. Run files in Investigations folder
   a. Run files in sequential order (Q01, Q02, Q03, Q04)
