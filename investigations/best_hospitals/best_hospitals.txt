@@ -1,0 +1,80 @@
+Sally Hong
+205 - Exercise 1
+
+
+Question 1
+
+---
+What hospitals are models of high-quality care? That is, which hospitals have the 
+most consistently high scores for a variety of procedures?
+---
+
+
+There are many ways to define "high-quality care". To me, if a hospital are to be
+"models", they should exhibit better than average for various procedures. 
+This weighting system favors hospitals of general care rather than specialized small
+ones. However, I chose this method as it is generic and selects "overall models".
+
+This was my logic.
+
+	A. From "Timely and Effective Care":
+
+		1. Remove all emergency measures. 
+			This was more for convenience as the scores
+			were in strings. The difficulty of analyzing and restructuring the queries to
+			accommodate emergency measures outweighed the impact of it on the overall
+			results.
+		2. Remove "Not Available" scores and those that measure ID that are "lower is better"
+			as well as those with footnotes (which mostly indicate there are not enough
+			samples) and focus on the the measures where higher scores are better for 
+			analysis.
+		3. Sort by Score, grouped by Measure ID
+		4. Determine the average score by Measure ID
+		5. Filter out those that have higher than average.
+			This was to keep only those that had higher than average for that Measure ID.
+		6. Count the number of times each hospital appears. 
+		7. Divide (6) by total number of measures available -- 51 from the reference sheet.
+
+	B. From "Readmissions and Deaths"
+
+		1. Filter only those with "better than national average".
+		2. Count the number of times each hospital appears
+		3. Divide (2) by total number of measures available 
+
+	C. 
+
+		1. Add the results from (6A) and (6B)
+		2. Sort
+
+
+
+This assumes equal weight to "Timely and Effective Care" and "Readmissions and Deaths"
+as well as equal weight to every Measure ID. In reality, if there are more Measure IDs for
+similar topic, the individual Measure IDs should carry less weight. However, this method
+does not account for fine details like that.
+
+If I were to run a serious experiment, I'd probably send a survey out to doctors and
+hospital administrators over the country to figure out more precise weights.
+
+---
+
+RESULTS:
+
+1.	100087  SARASOTA MEMORIAL HOSPITAL      	0.8067226890756303
+2. 	220077  BAYSTATE MEDICAL CENTER 			0.7296918767507004
+3. 	520138  AURORA ST LUKES MEDICAL CENTER  	0.6904761904761905
+4.	140258  ALEXIAN BROTHERS MEDICAL CENTER 	0.6316526610644257
+5. 	500016  CENTRAL WASHINGTON HOSPITAL     	0.6316526610644257
+6. 	140010  EVANSTON HOSPITAL       			0.6246498599439776
+7. 	450184  MEMORIAL HERMANN HOSPITAL SYSTEM    0.6050420168067226
+8.	030103  MAYO CLINIC HOSPITAL    			0.5994397759103641
+9.	050625  CEDARS-SINAI MEDICAL CENTER     	0.5994397759103641
+10.	330101  NEW YORK-PRESBYTERIAN HOSPITAL  	0.592436974789916
+Time taken: 0.156 seconds, Fetched 10 row(s)
+
+
+
+We see some big name hospitals in this list such as #8 Mayo Clinic Hospital and #9 Cedars-
+Sinai Medical Center. Many of the other hospitals rank regionally within their state.
+This list contains hospitals that consistently rank better than average on many procedures,
+providing to be a good model for other hospitals.
