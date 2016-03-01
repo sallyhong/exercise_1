@@ -1,5 +1,5 @@
 Run the investigation SQL files in order from 01 to 04.
 
-Be sure to have run the transform and loading SQL files prior to running the investigation SQL files.
+Be sure to have run the files in 'Loading and Modeling' folder and 'Transforming' folder prior to running the investigations SQL files.
 
 Text file accompanies each investigation SQL file explaining the code and reasoning for each query.
